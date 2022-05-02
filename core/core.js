@@ -7,9 +7,9 @@ var gh = {
     readmeTid: "blog/ABOUT/About Me.md", //个人主页标识
     treeUrl: "https://api.github.com/repos/${username}/${username}.github.io/git/trees/master?recursive=1", //所有文件地址
     cache: {}, //文件缓存
-    clientID: "bd98ae7094366c0c7473", //gitalk专用 用户自定义授权app参数
-    clientSecret: "238af78bbd953bd880d286ea5deef43f84c91638", //gitalk专用 用户自定义授权app参数
-    commentRepo: "blogComment", //评论所在仓库
+    clientID: "5387216aa80dab342ffd", //gitalk专用 用户自定义授权app参数
+    clientSecret: "d5193045d818e828e8be8bc590c06c566c1cd713", //gitalk专用 用户自定义授权app参数
+    commentRepo: "ghqs_blog_comment", //评论所在仓库
     isCommentOn: true // 是否开启评论功能，需要配置[clientID][clientSecret][commentRepo]三项属性。也是gitalk专用属性，需要新建个github app，详见gitalk文档 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 };
 /**
