@@ -1,5 +1,5 @@
-git st
+git status
 git pull
 git add .
-git ci -m "update"
+git commit -m "update"
 git push
