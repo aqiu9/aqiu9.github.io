@@ -3,7 +3,7 @@
  */
 var gh = {
     username: "${username}", //pages用户名
-    baseBlogUrl: "https://api.github.com/repos/${username}/${username}.github.io/blog/", //博客内容地址
+    baseBlogUrl: "https://api.github.com/repos/${username}/${username}.github.io/contents/", //博客内容地址
     readmeTid: "blog/ABOUT/About Me.md", //个人主页标识
     treeUrl: "https://api.github.com/repos/${username}/${username}.github.io/git/trees/master?recursive=1", //所有文件地址
     cache: {}, //文件缓存
