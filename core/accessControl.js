@@ -1,6 +1,6 @@
 function loop() {
 
-	if(window.location.pathname.indexOf('blog%2Fletter') != -1){
+	if(window.location.href.indexOf('blog%2Fletter') != -1){
 
 		var psw = ""
 
