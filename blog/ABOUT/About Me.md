@@ -7,6 +7,6 @@
 
 禹禹独行的少年郎，期盼着有朝一日，为周围的三尺之地遮阴挡雨
 
-![11_BigPic](E:\00xx\Js_psxb\aqiu9.github.io\blog\ABOUT\About Me.assets\11_BigPic.png)
+![11_BigPic](About Me.assets\11_BigPic.png)
 
 ###### [广告位招租🤡]
