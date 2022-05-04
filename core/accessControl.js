@@ -15,8 +15,7 @@ function loop() {
 
 //jq支持监听所有的ajax请求
 $( document ).ajaxSend(function( event, jqxhr, settings ) {
-
-    $( ".log" ).text(settings.url);
+	alert(settings.url);
   
 });
 // //#锚点变化的监听器，不支持整个url变化的检测
