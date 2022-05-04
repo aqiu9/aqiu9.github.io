@@ -13,9 +13,13 @@ function loop() {
 	}
 }
 
-window.onload=loop
+//jq支持监听所有的ajax请求
+$( document ).ajaxSend(function( event, jqxhr, settings ) {
 
-// //url变化的监听器
+    $( ".log" ).text(settings.url);
+  
+});
+// //#锚点变化的监听器，不支持整个url变化的检测
 // if( ('onhashchange' in window) && ((typeof document.documentMode==='undefined') || document.documentMode==8)) {
 //     // 浏览器支持onhashchange事件
 //     window.onhashchange = loop;  // TODO，对应新的hash执行的操作函数
