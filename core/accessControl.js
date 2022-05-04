@@ -27,7 +27,7 @@ function check() {
 $( document ).ajaxSend(function( event, jqxhr, settings ) {
 	// alert(settings.url);
 	// 检测“/blog/letter” 调用loop加访问控制
-	if(window.location.href.indexOf('/blog/letter') != -1){
+	if(settings.url.indexOf('/blog/letter') != -1){
 		var ret = check();
 		if (!ret) {
 			jqxhr.abort();  //点击取消则终止跳转
