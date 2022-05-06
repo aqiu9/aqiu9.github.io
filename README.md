@@ -1,16 +1,18 @@
-**这个博客系统基于TinyBlog做的的修改，适合做点笔记。** [TinyBlog的Github主页](https://github.com/YangHanqing/tinyblog) https://eastzq.github.io/
+**改编于TinyBlog —>** https://github.com/YangHanqing/tinyblog、https://github.com/eastzq/eastzq.github.io
 
-### 博客介绍
-1. 博客地址：https://aqiu9.github.io/
-2. 基于blog目录生成md文件树，支持搜索文章，非常适合平时做些笔记。特别是githubApi有访问频率限制的时候。
-3. 图片默认是放在md文件所在的目录。加载的时候回主动替换图片url，平时编辑器查看也更方便。不依赖文件服务器。
+### About
+1. 博客地址：https://aqiu9.github.io
+2. 递归blog目录生成**.md**的文件树，支持搜索文章。
+3. 图片默认是放在md文件所在的目录 or ./assets文件夹。加载时自动替换图片url。故不依赖文件服务器。
 4. 支持锚点定位和文章链接。
-5. 使用editormd插件用于把md文档转换成html。并支持目录自动生成。
+5. 使用editormd插件。把md文档转换成html，目录自动生成。
 6. 使用gitalk集成评论功能。
-7. 使用config.json作为全局配置，使用时只需修改关键参数。
+7. 使用config.json作为顶级配置文件，方便修改关键参数。
+8. 采用混淆后的js支持简单的文件or文件夹的**访问控制**。
 
-### 配置说明
-1. 配置文件config.json说明，开启评论功能需要配置[clientID][clientSecret][commentRepo]三项属性。详见gitalk文档 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+### config.json
+1. 想开启评论功能需要配置clientID clientSecret commentRepo三项属性。
    
-    
+   详见gitalk文档 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+   
     
