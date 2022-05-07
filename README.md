@@ -15,4 +15,8 @@
    
    详见gitalk文档 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
    
-    
+
+### TODO
+1. 虽然editor.md能支持katex解析，但是测试了一天发现博客里还是不能解析md里的公式，katex、latex虽然语法不一样，但是都可以用$$...$$ 做分界符，这是一个在本地latex和博客katex都兼容的方法，我用python脚本进行了替换，但是最后卡在了博客在转化为html时，会少一个'\' 导致katex语法错误  不知道哪里把\给转义掉了一个
+  
+CNMD！！！  
