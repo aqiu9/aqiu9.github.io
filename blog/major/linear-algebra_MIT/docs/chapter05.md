@@ -1,26 +1,26 @@
-﻿
+
 # 第五讲：转换、置换、向量空间R
 
 ## 置换矩阵（Permutation Matrix）
 
-P为置换矩阵，对任意可逆矩阵A有：
+$P$为置换矩阵，对任意可逆矩阵$A$有：
 
-$$PA=LU$$
+$PA=LU$
 
-n阶方阵的置换矩阵P有$$\binom{n}{1}=n!$$个
+$n$阶方阵的置换矩阵$P$有$\binom{n}{1}=n!$个
 
-对置换矩阵P，有$$P^TP = I$$
+对置换矩阵$P$，有$P^TP = I$
 
-即$$P^T = P^{-1}
+即$P^T = P^{-1}
 ## 转置矩阵（Transpose Matrix）
 
-$$(A^T)_{ij} = (A)_{ji}$$
+$(A^T)_{ij} = (A)_{ji}$
 
 ## 对称矩阵（Symmetric Matrix）
 
-$$A^T$$ = A
+$A^T$ = $A$
 
-对任意矩阵R有$$R^TR$$为对称矩阵：
+对任意矩阵$R$有$R^TR$为对称矩阵：
 
 $$
 (R^TR)^T = (R)^T(R^T)^T = R^TR\\
