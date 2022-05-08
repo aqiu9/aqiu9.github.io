@@ -283,7 +283,7 @@ var Api = (function() {
             editormd.markdownToHTML("article", {
                 markdown: md, //+ "\r\n" + $("#append-test").text(),
                 // htmlDecode: true, // 开启 HTML 标签解析，为了安全性，默认不开启
-                htmlDecode: "style,script,iframe", // you can filter tags decode
+                //htmlDecode: "style,script,iframe", // you can filter tags decode
                 tocContainer: "#md_toc_container", // 自定义 ToC 容器层
                 emoji: true,
                 taskList: true,
