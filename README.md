@@ -21,14 +21,15 @@
    - 修改了editormd.js的源码，其中调用katex的渲染接口只有两处，都是editormd.katex.render(xx, xx); 修改这两处即可，根据个人实践（能力和时间有限），第一处是影响无UI把katex渲染到HTML的，第二处是影响可视化编辑器的渲染结果。则修改第一处render调用即可，可以加上第三个参数(katex的配置文件-json对象)，并在渲染之前对输入的delimiter内的katex源码，进行过滤转换，把\&lt;、\&gt;、\&amp;(本人新增)，都转换为原始符号(至于为什么不是原始符号而是HTML中的那种形式，没有花时间追究，根据源码应该是由于先把md转换为HTML了，过程中可能会自动把上面相关符号转为\&xxx;转义的形式)；
      - xxx.replace(/\&amp;/g, "&")
    - 解决了\<br>标签无法解析的问题，不知道为何katex源码里还会带有HTML的换行标签，会导致解析错误(无论throwOnError为true还是false)，可能的原因还是md转为HTML时把在本地编辑器里输入的换行给无差别翻译成了\<br>标签，包括了katex源码中的这种回车换行。
-     - 我的解决方法是，xxx.replace(/\<br>/g, " ").replace(/\\\\\(?=[ ])/g, "\\\\\\\\")，注意js里也会转义'\\'
+     - xxx.replace(/\<br>/g, " ").replace(/\\\\\(?![A-z])/g, "\\\\\\\\")，注意js里也会转义'\\'
 
 2. （已修复）本地Typora的Latex语法和blog中的Katex语法解析的兼容问题。我的思路有两个，一个是如第一条问题所述，全都用\$\$做界定符来识别Tex源码，同时把行内的一些短小的，比如\$2\$,\$A\$这种，给她去掉\$，以普通文本显示，这样能减少公式块，让页面好看一点，不过说到底这种方式还是曲线救国的方式，不是最佳选择。第二个是尝试能否应用katex官网的 *Auto*-render *Extension*  ，其可以实现自定义delimiter，以解决该问题。
 
    - 第一种方式可采用根目录下的脚本：dealwith\$-reg.py
-   - 第二种方式尝试修改源码如下：
+   - （无效）第二种方式尝试修改源码如下：
 
    ```javascript
+   //可能是因为时机不对，在配置auto-render应该在dom初次加载完成的时候，目前这些修改的位置似乎都已经过了这个阶段。
    //modified in editormd.js, //js_autoRender-->editormd.loadKaTeX-->this.loadKaTeX-->katexHandle
    //修改了katex的版本，使用最新的0.15版本。原本是0.3。
            editormd.katexURL  = {
