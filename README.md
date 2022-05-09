@@ -44,7 +44,7 @@
                // });
                editormd.loadCSS(editormd.katexURL.css, function(){
                    editormd.loadScript(editormd.katexURL.js, function(){
-                        editormd.loadScript(editormd.katexURL.js_autoRender, callback || function(){}
+                        editormd.loadScript(editormd.katexURL.js_autoRender, callback || function(){});
                    });
                });
            };
