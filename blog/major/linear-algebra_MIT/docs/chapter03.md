@@ -69,9 +69,11 @@
 
 证明：如果对于非零的x仍有Ax=0，而A有逆$$A^{-1}$$，则$$A^{-1}Ax=0$$，即x=0，与题设矛盾，得证。
 
-现在来看看什么矩阵有逆，设$$A=\begin{bmatrix}1&3\\2&7\end{bmatrix}$$，我们来求$$A^{-1}$$。$$\begin{bmatrix}1&3\\2&7\end{bmatrix}\begin{bmatrix}a&b\\c&d\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}$$，使用列向量线性组合的思想，我们可以说A乘以$$A^{-1}$$的第j列，能够得到I的第j列，这时我会得到一个关于列的方程组。
+如何求出矩阵的逆呢？
 
-接下来介绍高斯-若尔当（Gauss-Jordan）方法，该方法可以一次处理所有的方程：
+设$$A=\begin{bmatrix}1&3\\2&7\end{bmatrix}$$，我们来求$$A^{-1}$$。$$\begin{bmatrix}1&3\\2&7\end{bmatrix}\begin{bmatrix}a&b\\c&d\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}$$，使用列向量线性组合的思想，我们可以说A乘以$$A^{-1}$$的第j列，能够得到I的第j列，这时我会得到一个关于列的方程组。
+
+接下来介绍高斯-若尔当（Gauss-Jordan）方法，该方法可以一次处理所有的方程： 
 
 * 这个方程组为$$\begin{cases}\begin{bmatrix}1&3\\2&7\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}=\begin{bmatrix}1\\0\end{bmatrix}\\\begin{bmatrix}1&3\\2&7\end{bmatrix}\begin{bmatrix}c\\d\end{bmatrix}=\begin{bmatrix}0\\1\end{bmatrix}\end{cases}$$，我们想要同时解这两个方程；
 
@@ -80,3 +82,10 @@
 * 于是，我们就将矩阵从$$\left[\begin{array}{c|c}A&I\end{array}\right]$$变为$$\left[\begin{array}{c|c}I&A^{-1}\end{array}\right]$$
 
 而高斯-若尔当法的本质是使用消元矩阵E，对A进行操作，$$E\left[\begin{array}{c|c}A&I\end{array}\right]$$，利用一步步消元有EA=I，进而得到$$\left[\begin{array}{c|c}I&E\end{array}\right]$$，其实这个消元矩阵E就是$$A^{-1}$$，而高斯-若尔当法中的I只是负责记录消元的每一步操作，待消元完成，逆矩阵就自然出现了。
+
+```js
+/*
+为什么I会变成A的逆矩阵呢？
+因为A和I是一起进行行变换的，当A变成I的时候相当于左乘了一个初等矩阵[A的逆]，则增广矩阵种的I，也经历了同样的行变换，所以I变换的结果就是 I乘以[A的逆]，即[A的逆]。
+*/
+```
