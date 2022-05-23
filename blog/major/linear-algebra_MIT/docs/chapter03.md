@@ -29,7 +29,7 @@
   
     $$\begin{bmatrix}\vdots&\vdots&\vdots&\vdots\\a_{i1}&a_{i2}&\cdots&a_{in}\\\vdots&\vdots&\vdots&\vdots\end{bmatrix}\begin{bmatrix}&B_{row1}&\\&B_{row2}&\\&\vdots&\\&B_{rown}&\end{bmatrix}=\begin{bmatrix}\vdots\\\left(a_{i1}B_{row1}+a_{i2}B_{row2}+\cdots+a_{in}B_{rown}\right)\\\vdots\end{bmatrix}$$
     
-    上面的运算为A的第i个行向量左乘矩阵B，求得的结果就是C矩阵的第i行，即C的第i行是B的行向量以A的第i行作为系数所求的的线性组合，$$C_i=a_{i1}B_{row1}+a_{i2}B_{row2}+\cdots+a_{in}B_{rown}$$。
+    上面的运算为A的第i个行向量左乘矩阵B，求得的结果就是C矩阵的第i行，即C的第i行是B的行向量以A的第i行作为系数所求的线性组合，$$C_i=a_{i1}B_{row1}+a_{i2}B_{row2}+\cdots+a_{in}B_{rown}$$。
 
 * **sum(列乘以行)：**其实这种和第一种是一致的，只是把左侧视作行向量还是列向量的区别。
   
@@ -45,7 +45,7 @@
 
 ## 逆（方阵）
 
-首先，并不是所有的方阵都有逆；而如果逆存在，则有$$A^{-1}A=I=AA^{-1}$$。教授这里提前剧透，***对于方阵，左逆和右逆是相等的，但是对于非方阵（长方形矩阵），其左逆不等于右逆。***
+**首先，并不是所有的方阵都有逆**；而如果逆存在，则有$$A^{-1}A=I=AA^{-1}$$。教授这里提前剧透，***对于方阵，左逆和右逆是相等的，但是对于非方阵（长方形矩阵），其左逆不等于右逆。***
 
 ```js
 //因为矩阵乘有一定的要求，导致形状不同。

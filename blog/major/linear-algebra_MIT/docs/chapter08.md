@@ -1,4 +1,4 @@
-﻿
+
 # 第八讲：求解Ax=b：可解性和解的结构
 
 举例，同上一讲：$$3 \times 4$$矩阵
@@ -9,10 +9,13 @@ A=
 2 & 4 & 6 & 8\\
 3 & 6 & 8 & 10\\
 \end{bmatrix}
-$$，求Ax=b的特解：
+$$
+，求Ax=b的特解：
 
-写出其增广矩阵（augmented matrix）$$\left[\begin{array}{c|c}A & b\end{array}\right]$$：
-
+写出其增广矩阵（augmented matrix）：
+$$
+\left[\begin{array}{c|c}A & b\end{array}\right]
+$$
 $$
 \left[
 \begin{array}{c c c c|c}
@@ -30,12 +33,12 @@ $$
 \end{array}
 \right]
 $$
-
 显然，有解的必要条件为$$b_3-b_2-b_1=0$$。
 
 讨论b满足什么条件才能让方程Ax=b有解（solvability condition on b）：当且仅当b属于A的列空间时。另一种描述：如果A的各行线性组合得到0行，则b端分量做同样的线性组合，结果也为0时，方程才有解。
 
-解法：令所有自由变量取0，则有$$
+解法：令所有自由变量取0，则有
+$$
 \Big\lbrace
 \begin{eqnarray*}
 x_1 & + & 2x_3 & = & 1 \\
@@ -48,7 +51,7 @@ $$
 \begin{eqnarray*}
 x_1 & = & -2 \\
 x_3 & = & \frac{3}{2} \\
-\end{eqnarray*}
+\end{eqnarray*} 
 $$
 ，代入Ax=b求得特解
 $$
@@ -56,10 +59,9 @@ x_p=
 \begin{bmatrix}
 -2 \\ 0 \\ \frac{3}{2} \\ 0
 \end{bmatrix}
-$$。
+$$
 
 令Ax=b成立的所有解：
-
 $$
 \Big\lbrace
 \begin{eqnarray}
@@ -71,7 +73,6 @@ A & x_n & = & 0 \\
 \quad
 A(x_p+x_n)=b
 $$
-
 即Ax=b的解集为其特解加上零空间，对本例有：
 $$
 x_{complete}=
@@ -83,7 +84,6 @@ c_1\begin{bmatrix}-2\\1\\0\\0\\\end{bmatrix}
 +
 c_2\begin{bmatrix}2\\0\\-2\\1\\\end{bmatrix}
 $$
-
 对于$$m \times n$$矩阵A，有矩阵A的秩$$r \leq min(m, n)$$
 
 列满秩r=n情况：
@@ -119,5 +119,6 @@ $$
 ，则A最终可以化简为R=I，其零空间只包含0向量。
 
 总结：
-
-$$\begin{array}{c|c|c|c}r=m=n&r=n\lt m&r=m\lt n&r\lt m,r\lt n\\R=I&R=\begin{bmatrix}I\\0\end{bmatrix}&R=\begin{bmatrix}I&F\end{bmatrix}&R=\begin{bmatrix}I&F\\0&0\end{bmatrix}\\1\ solution&0\ or\ 1\ solution&\infty\ solution&0\ or\ \infty\ solution\end{array}$$
+$$
+\begin{array}{c|c|c|c}r=m=n&r=n\lt m&r=m\lt n&r\lt m,r\lt n\\R=I&R=\begin{bmatrix}I\\0\end{bmatrix}&R=\begin{bmatrix}I&F\end{bmatrix}&R=\begin{bmatrix}I&F\\0&0\end{bmatrix}\\1\ solution&0\ or\ 1\ solution&\infty\ solution&0\ or\ \infty\ solution\end{array}
+$$
