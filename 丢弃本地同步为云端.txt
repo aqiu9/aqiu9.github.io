@@ -1,0 +1,7 @@
+git log
+git rebase -i xxxx(last one id)
+然后pick改成drop
+
+git fetch --all
+git reset --hard origin/master
+git pull
