@@ -5,7 +5,7 @@ var gh = {
     username: "${username}", //pages用户名
     baseBlogUrl: "https://api.github.com/repos/${username}/${username}.github.io/contents/", //博客内容地址
     readmeTid: "blog/ABOUT/About Me.md", //个人主页标识
-    treeUrl: "https://api.github.com/repos/${username}/${username}.github.io/git/trees/master?recursive=1", //所有文件地址
+    treeUrl: "https://api.github.com/repos/${username}/${username}.github.io/git/trees/main?recursive=1", //所有文件地址
     cache: {}, //文件缓存
     clientID: "5387216aa80dab342ffd", //gitalk专用 用户自定义授权app参数
     clientSecret: "d5193045d818e828e8be8bc590c06c566c1cd713", //gitalk专用 用户自定义授权app参数
